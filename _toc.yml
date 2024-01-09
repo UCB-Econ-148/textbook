@@ -1,0 +1,34 @@
+format: jb-article
+root: content/intro
+title: Home
+sections:
+# - file: content/01-python_v_stata/index.md
+#   sections:
+#     - file: content/01-python_v_stata/history.md
+#     - file: content/01-python_v_stata/differences.md
+#     - file: content/01-python_v_stata/install.md
+#     - file: content/01-python_v_stata/syntax.md
+- file: content/02-prereqs/index.md
+  sections:
+      - file: content/02-prereqs/python.ipynb
+      - file: content/02-prereqs/jupyter.ipynb
+      - file: content/02-prereqs/numpy.ipynb
+- file: content/03-pandas/index.md
+  sections:
+      - file: content/03-pandas/loading-looking.ipynb
+      - file: content/03-pandas/select_modify.ipynb
+      - file: content/03-pandas/misc_funcs.ipynb
+      - file: content/03-pandas/groupby_pivot.ipynb
+      - file: content/03-pandas/merge.ipynb
+- file: content/04-visualizations/index.md
+  sections:
+      - file: content/04-visualizations/choosing.ipynb
+      - file: content/04-visualizations/types.ipynb
+      - file: content/04-visualizations/advanced.ipynb
+- file: content/05-regex/regex.ipynb
+- file: content/06-api/api.ipynb
+- file: content/07-sql/sql.ipynb
+# - file: content/07-regressions/index.md
+# - file: content/08-web-scraping/index.md
+# - file: content/09-teachers-perspective/index.md
+# - file: content/references.md
