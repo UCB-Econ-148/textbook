@@ -10,7 +10,7 @@ This book teaches data science concepts using [Python](https://www.python.org/) 
 
 ## Acknowledgements
 
-**Textbook Author and Developer:** Rohan Jha
+**Textbook Author:** Rohan Jha
 
 **Acknowledgements:** Eric Van Dusen, as well as several other economics and data science courses/teachers at UC Berkeley and elsewhere which helped inspire the content of this book
 
