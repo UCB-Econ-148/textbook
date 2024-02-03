@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>APIs &#8212; Python for Economists</title>
   
@@ -19,55 +18,59 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=6927bdd9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../../_static/plotly.min.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_site/content/06-api/api';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/plotly.min.js?v=7525fa7a"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -79,10 +82,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +125,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../content/intro.html">
@@ -154,7 +162,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -297,6 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -306,6 +326,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -367,7 +388,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -379,11 +400,11 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="apis">
-<h1>APIs<a class="headerlink" href="#apis" title="Permalink to this heading">#</a></h1>
+<h1>APIs<a class="headerlink" href="#apis" title="Link to this heading">#</a></h1>
 <p>Application Programming Interfaces, commonly known as APIs, are tools that allow different softwares to communicate with each other. Organizations may choose to maintain APIs to provide easy access to their data, in the interest of research. As economists, we may be interested in using these APIs to access their data for further research. A famous example of such an API is the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/">Fred API</a>, which is maintained by the Federal Reserve Bank of St. Louis and allows us to easily retrieve Federal Reserve Data.</p>
 <p>Ultimately, there are thousands of APIs and they all have different ways you can interact with them. It is impossible to learn how to interact with every API. Instead, the key skill you should focus on is learning how to read the documentation of APIs. Once you can successfully read and understand an API’s documentation, you will have no trouble working with that API. This chapter will use the Fred API as an example for how to read an APIs documentation. Let us get started. We will be referencing the relevant <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html">documentation</a> a lot during this chapter, we recommend you also keep it open for easy reference.</p>
 <section id="requests">
-<h2>Requests<a class="headerlink" href="#requests" title="Permalink to this heading">#</a></h2>
+<h2>Requests<a class="headerlink" href="#requests" title="Link to this heading">#</a></h2>
 <p>As you can see at the top of the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html">documentation</a>, in order to access the Fred API, we must ‘request’ URLs. Python’s <a class="reference external" href="https://requests.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">requests</span></code></a> library is incredibly popular for making such requests. A very simple example of a request is shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -401,10 +422,10 @@ document.write(`
 <p>In order to make a successful request, you need an API key. We talk more about them in the next section.</p>
 </section>
 <section id="parameters">
-<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">#</a></h2>
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
 <p>This section will go through and describe all the parameters in the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html">documentation</a>.</p>
 <section id="api-key">
-<h3>API Key<a class="headerlink" href="#api-key" title="Permalink to this heading">#</a></h3>
+<h3>API Key<a class="headerlink" href="#api-key" title="Link to this heading">#</a></h3>
 <p>In order to make a request, you need an API key. An API key is a unique identifier used to connect to, or perform, an API call. It shows that you are using the software legitimately and are not violating the platforms terms and conditions. For the Fred API, you can easily request an API key <a class="reference external" href="https://fred.stlouisfed.org/docs/api/api_key.html">here</a>.</p>
 <p>If someone else obtains your API key, they can effectively pretend to be you. They can misuse your API key, using it to violate the platforms terms and conditions, and get you banned or worse. Therefore, it is good practice to keep your API keys secret to yourself. In keeping with this practice, we shall not share the API key we used for this notebook, and you must request your own API key if you wish to replicate the results.</p>
 <div class="cell docutils container">
@@ -416,15 +437,15 @@ document.write(`
 </div>
 </section>
 <section id="file-type">
-<h3>File Type<a class="headerlink" href="#file-type" title="Permalink to this heading">#</a></h3>
+<h3>File Type<a class="headerlink" href="#file-type" title="Link to this heading">#</a></h3>
 <p>This parameter indicates which type of file to return as the output. For the Fred API, it is often easiest to work with <a class="reference external" href="https://www.json.org/json-en.html">JSON files</a> as the output. JSON files are an example of <a class="reference external" href="https://www.teradata.com/glossary/what-is-semi-structured-data#:~:text=Semi%2Dstructured%20data%20refers%20to,not%20have%20a%20fixed%20schema.">semi-structured data</a>, an alternative to structured csv’s we have been using so far. We will not delve into json’s too much for now, other than noting that <code class="docutils literal notranslate"><span class="pre">pandas</span></code> has an easy to use <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_json.html"><code class="docutils literal notranslate"><span class="pre">.read_json()</span></code></a> method. The API notes that if we choose to return a <code class="docutils literal notranslate"><span class="pre">txt</span></code> or <code class="docutils literal notranslate"><span class="pre">xls</span></code> file, an application/zip file will be returned to compress the data. So, it is easiest to return a <code class="docutils literal notranslate"><span class="pre">json</span></code> file and directly read it in.</p>
 </section>
 <section id="series-id">
-<h3>Series ID<a class="headerlink" href="#series-id" title="Permalink to this heading">#</a></h3>
-<p>The series ID lets the Fred API know which data you are interested in. The Fred API supports over 800,000 different series, you can view the list <a class="reference external" href="https://fred.stlouisfed.org/tags/series?t=id&amp;rt=id&amp;ob=pv&amp;od=desc">here</a>.</p>
+<h3>Series ID<a class="headerlink" href="#series-id" title="Link to this heading">#</a></h3>
+<p>The series ID lets the Fred API know which data you are interested in. The Fred API supports over 800,000 different series, you can view the list <a class="reference external" href="https://fred.stlouisfed.org/tags/series?t=id&amp;amp;rt=id&amp;amp;ob=pv&amp;amp;od=desc">here</a>.</p>
 </section>
 <section id="real-time">
-<h3>Real-Time<a class="headerlink" href="#real-time" title="Permalink to this heading">#</a></h3>
+<h3>Real-Time<a class="headerlink" href="#real-time" title="Link to this heading">#</a></h3>
 <p>It is a very difficult job calculating metrics like a country’s real GDP. For example, read <a class="reference external" href="https://www.econstor.eu/bitstream/10419/200206/1/20180700_fix_nitzan_bichler_real_gdp_rwer.pdf">this article</a> on difficulties people encounter when calculating real GDP. Often, economists review old data and revise it based on new findings or updated ways of calculating a metric. When this happens, the FRED keeps a record of the new data as well as old data and how long people believed in those numbers.</p>
 <p>For example, the API call below extracts real-time data for the US real GDP in 1947 (series ID: <a class="reference external" href="https://fred.stlouisfed.org/series/GDPC1">GDPC1</a>).</p>
 <div class="cell docutils container">
@@ -499,19 +520,19 @@ document.write(`
 <p>The default value of both <code class="docutils literal notranslate"><span class="pre">realtime_start</span></code> and <code class="docutils literal notranslate"><span class="pre">realtime_end</span></code> is the current date, so you will only get the most up-to-date figures and estimates. However, if you wish, you can also access older data by setting <code class="docutils literal notranslate"><span class="pre">realtime_start</span></code> and <code class="docutils literal notranslate"><span class="pre">realtime_end</span></code> to span the time period whose data you are interested in.</p>
 </section>
 <section id="limit">
-<h3>Limit<a class="headerlink" href="#limit" title="Permalink to this heading">#</a></h3>
+<h3>Limit<a class="headerlink" href="#limit" title="Link to this heading">#</a></h3>
 <p>The limit is the maximum number of results you can return with the API call. As you can see, the Fred API does not allow you to return more than 100,000 results at once, out of fear of crashing the API. Abusing the limit rate of the API often gets you banned. This is another reason to keep your API key secret, you don’t want someone pretending to be you and then abusing the limit rate.</p>
 </section>
 <section id="offset">
-<h3>Offset<a class="headerlink" href="#offset" title="Permalink to this heading">#</a></h3>
+<h3>Offset<a class="headerlink" href="#offset" title="Link to this heading">#</a></h3>
 <p>Skips the first <span class="math notranslate nohighlight">\(n\)</span> data points, where <span class="math notranslate nohighlight">\(n\)</span> is a whole number. The default value is 0, or skipping no data points.</p>
 </section>
 <section id="sort-order">
-<h3>Sort Order<a class="headerlink" href="#sort-order" title="Permalink to this heading">#</a></h3>
+<h3>Sort Order<a class="headerlink" href="#sort-order" title="Link to this heading">#</a></h3>
 <p>Sorts by date in ascending or descending fashion.</p>
 </section>
 <section id="observation-period">
-<h3>Observation Period<a class="headerlink" href="#observation-period" title="Permalink to this heading">#</a></h3>
+<h3>Observation Period<a class="headerlink" href="#observation-period" title="Link to this heading">#</a></h3>
 <p>The period whose data you are interested in. While the real-time looks at when an estimate was made, the observation time looks at which year/quarter the estimate is being made for. For example, if you want the most recent/up-to-date data on US GDP over time, your observation period will be 1776 to present while your real-time period will be today. We have made this sample API call below and returned the first 5 rows, how does it compare to the sample API call in the real-time section?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,28 +568,28 @@ document.write(`
 </div>
 </section>
 <section id="units">
-<h3>Units<a class="headerlink" href="#units" title="Permalink to this heading">#</a></h3>
+<h3>Units<a class="headerlink" href="#units" title="Link to this heading">#</a></h3>
 <p>The units to return your data in; examples include just the raw data, change in data from the previous year, percent change from the previous year, etc. Read the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html#units">documentation</a> to see all the available options.</p>
 </section>
 <section id="frequency">
-<h3>Frequency<a class="headerlink" href="#frequency" title="Permalink to this heading">#</a></h3>
+<h3>Frequency<a class="headerlink" href="#frequency" title="Link to this heading">#</a></h3>
 <p>How frequent should your returned data be? Do you want estimates from every year or every quarter? Read the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html#units">documentation</a> to see all the possible frequencies (but note that not every series supports all these frequencies).</p>
 <p><em>Important Note:</em> If a series is calculated every year, you cannot get quarterly estimates. However, if a series is calculated every quarter, you can get yearly estimates. To see how to specify how to calculate the yearly estimates, look at aggregation methods below. If you try to get an estimate from a frequency which is not possible with the given series data, your API call will error.</p>
 </section>
 <section id="aggregation-method">
-<h3>Aggregation Method<a class="headerlink" href="#aggregation-method" title="Permalink to this heading">#</a></h3>
+<h3>Aggregation Method<a class="headerlink" href="#aggregation-method" title="Link to this heading">#</a></h3>
 <p>If you are converting a series from higher frequency data (more frequent datapoints) to lower frequency data (more spaced out datapoints), how do you want to aggregate the results? For example, if inflation is calculated every month but you want annual inflation, do you want to take the average of all the months or just look at the last month? In general, there are 3 options: average all the lower frequency data points, sum all the lower frequency data points or just look at the last lowest frequency data point from the relevant period.</p>
 </section>
 <section id="vintage-dates-and-output-type">
-<h3>Vintage Dates (and Output Type)<a class="headerlink" href="#vintage-dates-and-output-type" title="Permalink to this heading">#</a></h3>
+<h3>Vintage Dates (and Output Type)<a class="headerlink" href="#vintage-dates-and-output-type" title="Link to this heading">#</a></h3>
 <p>A form of real time data, read the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html#units">documentation</a> for more information.</p>
 </section>
 </section>
 <section id="putting-it-all-together">
-<h2>Putting it all Together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this heading">#</a></h2>
+<h2>Putting it all Together<a class="headerlink" href="#putting-it-all-together" title="Link to this heading">#</a></h2>
 <p>To put it all together, look at the <a class="reference external" href="https://fred.stlouisfed.org/docs/api/fred/series_observations.html#example_json">sample requests</a> in the documentation. You want to make a request to the a URL which begins with <code class="docutils literal notranslate"><span class="pre">https://api.stlouisfed.org/fred/series/observations</span></code> and then includes all the specified parameters. For example, let us all possible extract data from the series for <em>Estimated Percent of People of All Ages in Poverty for United States</em> (series ID: <a class="reference external" href="https://fred.stlouisfed.org/series/PPAAUS00000A156NCEN">PPAAUS00000A156NCEN</a>).</p>
 <section id="urlencode">
-<h3><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code><a class="headerlink" href="#urlencode" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">urlencode()</span></code><a class="headerlink" href="#urlencode" title="Link to this heading">#</a></h3>
 <p>To put all the parameters together easily, Python’s <a class="reference external" href="https://docs.python.org/3/library/urllib.html"><code class="docutils literal notranslate"><span class="pre">urllib</span></code></a> package has a great <a class="reference external" href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.urlencode"><code class="docutils literal notranslate"><span class="pre">parse.urlencode()</span></code></a> method. This method takes in a dictionary with has the names of the parameters as the keys and their settings as the values. It outputs a string which encodes all the parameters. Let us look at an example below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -591,7 +612,7 @@ document.write(`
 </div>
 </section>
 <section id="making-the-request-and-converting-to-dataframe">
-<h3>Making the Request and Converting to DataFrame<a class="headerlink" href="#making-the-request-and-converting-to-dataframe" title="Permalink to this heading">#</a></h3>
+<h3>Making the Request and Converting to DataFrame<a class="headerlink" href="#making-the-request-and-converting-to-dataframe" title="Link to this heading">#</a></h3>
 <p>So, let’s make the request!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1078,7 +1099,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -1088,6 +1109,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1137,9 +1159,10 @@ By Rohan Jha
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1163,8 +1186,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

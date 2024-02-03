@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Selecting and Modifying Rows/Columns &#8212; Python for Economists</title>
   
@@ -19,53 +18,57 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=6927bdd9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../../_static/plotly.min.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_site/content/03-pandas/select_modify';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/plotly.min.js?v=7525fa7a"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -77,10 +80,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -121,11 +123,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,6 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../content/intro.html">
@@ -152,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -295,6 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -304,6 +324,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -357,7 +378,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -368,7 +389,7 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="selecting-and-modifying-rows-columns">
-<h1>Selecting and Modifying Rows/Columns<a class="headerlink" href="#selecting-and-modifying-rows-columns" title="Permalink to this heading">#</a></h1>
+<h1>Selecting and Modifying Rows/Columns<a class="headerlink" href="#selecting-and-modifying-rows-columns" title="Link to this heading">#</a></h1>
 <p>This subchapter will go into greater detail on how you can select/modify rows and columns in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <p>First, let us load in the same dataset as the first subchapter in the <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> chapter. As a reminder, this dataset has beer sales across 50 continental states in the US. It is sourced from <a class="reference external" href="https://www.aeaweb.org/articles?id=10.1257/aer.99.4.1145"><em>Salience and Taxation: Theory and Evidence</em></a> by Chetty, Looney, and Kroft (AER 2009), and it includes 7 columns:</p>
 <ul class="simple">
@@ -532,9 +553,9 @@ document.write(`
 </div></div></div>
 </div>
 <section id="extracting-rows-columns-that-satisfy-a-given-condition">
-<h2>Extracting Rows/Columns that Satisfy a Given Condition<a class="headerlink" href="#extracting-rows-columns-that-satisfy-a-given-condition" title="Permalink to this heading">#</a></h2>
+<h2>Extracting Rows/Columns that Satisfy a Given Condition<a class="headerlink" href="#extracting-rows-columns-that-satisfy-a-given-condition" title="Link to this heading">#</a></h2>
 <p>An important task we want to accomplish when looking at data is to filter out all rows that satisfy a certain condition. In other words, we want to extract all the rows <strong>where</strong> a certain thing is accomplished. Conditional selection helps us achieve exactly this, extracting all rows that satisfy a certain condition.</p>
-<p>In the <a class="reference internal" href="loading-looking.html"><span class="doc std std-doc">previous subchapter</span></a>, we briefly gave an example of how we can use <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to extract all rows that match certain values. To be more precise, when we pass in certain values for <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc</span></code> to use, they generate an array of True/False values and use that to determine which values to include. This is very similar to our prior discussion on <a class="reference internal" href="../02-prereqs/numpy.html"><span class="doc std std-doc">NumPy slicing</span></a>.</p>
+<p>In the <a class="reference internal" href="loading-looking.html"><span class="std std-doc">previous subchapter</span></a>, we briefly gave an example of how we can use <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to extract all rows that match certain values. To be more precise, when we pass in certain values for <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc</span></code> to use, they generate an array of True/False values and use that to determine which values to include. This is very similar to our prior discussion on <a class="reference internal" href="../02-prereqs/numpy.html"><span class="std std-doc">NumPy slicing</span></a>.</p>
 <p>For example, let’s say we want all the data for the state of Alabama. Then, we would want all rows where <code class="docutils literal notranslate"><span class="pre">st_name</span></code> is <code class="docutils literal notranslate"><span class="pre">CA</span></code>. We can generate a Series of True/False values corresponding to whether each row has a <code class="docutils literal notranslate"><span class="pre">st_name</span></code> of <code class="docutils literal notranslate"><span class="pre">AL</span></code> using the code below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -946,7 +967,7 @@ Name: st_name, Length: 1708, dtype: bool
 </div>
 <p>As you can imagine, quickly and easily generating these boolean arrays/Series is very important for accessing our elements!</p>
 <section id="logical-operators">
-<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h3>
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Link to this heading">#</a></h3>
 <p>What if we have multiple conditions we want to filter on? Let’s say we want to look at all the rows where <code class="docutils literal notranslate"><span class="pre">beer_tax</span></code> is less than 3 and <code class="docutils literal notranslate"><span class="pre">btax_dollars</span></code> is less than 0.5. We can generate boolean filters for both of those conditions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1675,7 +1696,7 @@ Name: st_name, Length: 1708, dtype: bool
 </table>
 </section>
 <section id="multiple-labels">
-<h3>Multiple Labels<a class="headerlink" href="#multiple-labels" title="Permalink to this heading">#</a></h3>
+<h3>Multiple Labels<a class="headerlink" href="#multiple-labels" title="Link to this heading">#</a></h3>
 <p>If you want to keep all rows where a certain column is in a list of given values, you can use the <code class="docutils literal notranslate"><span class="pre">.isin()</span></code> method. This is logically equivalent to using the <code class="docutils literal notranslate"><span class="pre">|</span></code> operator multiple times, but it’s easier. For example, below we get all rows corresponding to the states of California, Florida, Texas and Nebraska.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1852,7 +1873,7 @@ Name: st_name, Length: 1708, dtype: bool
 </div>
 </section>
 <section id="editing-rows">
-<h3>Editing Rows<a class="headerlink" href="#editing-rows" title="Permalink to this heading">#</a></h3>
+<h3>Editing Rows<a class="headerlink" href="#editing-rows" title="Link to this heading">#</a></h3>
 <p>We can also use conditional selection to edit certain rows. For example, let’s say we found out we made an error with measuring <code class="docutils literal notranslate"><span class="pre">beer_tax</span></code> for the state of Alabama, and the true beer tax is actually 0.1 higher than what we’ve measured. We can easily use boolean filtering to select the columns where we’ve made this mistake and fix them!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2252,10 +2273,10 @@ Name: beer_tax, dtype: float64
 </section>
 </section>
 <section id="modifying-columns-and-indices">
-<h2>Modifying Columns and Indices<a class="headerlink" href="#modifying-columns-and-indices" title="Permalink to this heading">#</a></h2>
+<h2>Modifying Columns and Indices<a class="headerlink" href="#modifying-columns-and-indices" title="Link to this heading">#</a></h2>
 <p>Now, we move on to modifying the columns in our DataFrames. The first task we will consider is how to add a new column.</p>
 <section id="adding-columns">
-<h3>Adding Columns<a class="headerlink" href="#adding-columns" title="Permalink to this heading">#</a></h3>
+<h3>Adding Columns<a class="headerlink" href="#adding-columns" title="Link to this heading">#</a></h3>
 <p>Let’s say we want to add a new column where we calculate the total percentage taxed by combining the <code class="docutils literal notranslate"><span class="pre">beer_tax</span></code> and <code class="docutils literal notranslate"><span class="pre">salestax</span></code>. Both of these % taxes compound, so we will need to be careful with the math! Below, we calculate a series with the sum of these two taxes, as a percent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2380,7 +2401,7 @@ Length: 1708, dtype: float64
 <p>Voila, our new column has been added!</p>
 </section>
 <section id="renaming-columns">
-<h3>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Permalink to this heading">#</a></h3>
+<h3>Renaming Columns<a class="headerlink" href="#renaming-columns" title="Link to this heading">#</a></h3>
 <p>Looking at the table above, <code class="docutils literal notranslate"><span class="pre">c_beer</span></code> feels like a confusing name. Instead, let us change to <code class="docutils literal notranslate"><span class="pre">beer_consumption</span></code>, a more informative name! To do so, we can use the DataFrame <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html"><code class="docutils literal notranslate"><span class="pre">rename</span></code> method</a>, as shown below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3036,7 +3057,7 @@ Length: 1708, dtype: float64
 </div>
 </section>
 <section id="dropping-columns">
-<h3>Dropping Columns<a class="headerlink" href="#dropping-columns" title="Permalink to this heading">#</a></h3>
+<h3>Dropping Columns<a class="headerlink" href="#dropping-columns" title="Link to this heading">#</a></h3>
 <p>Finally, let’s say we want to drop a column. For this, we can use the DataFrame <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html"><code class="docutils literal notranslate"><span class="pre">drop</span></code> method</a>. For example, we drop the <code class="docutils literal notranslate"><span class="pre">salestax</span></code> column below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3621,7 +3642,7 @@ Length: 1708, dtype: float64
 </div>
 </section>
 <section id="modifying-the-index">
-<h3>Modifying the Index<a class="headerlink" href="#modifying-the-index" title="Permalink to this heading">#</a></h3>
+<h3>Modifying the Index<a class="headerlink" href="#modifying-the-index" title="Link to this heading">#</a></h3>
 <p>To modify the index of a DataFrame, there are three main methods, as discussed below.</p>
 <p><code class="docutils literal notranslate"><span class="pre">.set_index()</span></code> Sets the index of the DataFrame to a particular column.</p>
 <div class="cell docutils container">
@@ -4118,7 +4139,7 @@ Length: 1708, dtype: float64
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -4128,6 +4149,7 @@ Length: 1708, dtype: float64
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -4169,9 +4191,10 @@ By Rohan Jha
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -4195,8 +4218,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Basic Visualizations &#8212; Python for Economists</title>
   
@@ -19,53 +18,57 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=6927bdd9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../../_static/plotly.min.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_site/content/04-visualizations/types';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/plotly.min.js?v=7525fa7a"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -77,10 +80,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -121,11 +123,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -140,6 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../content/intro.html">
@@ -152,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -295,6 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -304,6 +324,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -362,7 +383,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -383,7 +404,7 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="basic-visualizations">
-<h1>Basic Visualizations<a class="headerlink" href="#basic-visualizations" title="Permalink to this heading">#</a></h1>
+<h1>Basic Visualizations<a class="headerlink" href="#basic-visualizations" title="Link to this heading">#</a></h1>
 <p>In thus subchapter, we will go over some key types of plots, as well as how to create them using two of the most common plotting libraries in Python: <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>. However, first we will need to load in the dataset we will be using for this analysis.</p>
 <p>For this analysis, we will be loading in a subset of <a class="reference external" href="https://datatopics.worldbank.org/education/">World Bank’s Education Statistics (EdStats) Dataset</a>. The subset we will be working with has data on a bunch of education metrics/indicators for 25 regions from 1970-2014. We have cleaned this dataset to ensure we don’t have any missing datapoints. There are too many indicators to even begin describing all. We highly encourage you to explore World Bank’s data directly if you’re interested!</p>
 <div class="cell docutils container">
@@ -706,7 +727,7 @@ document.write(`
 </div></div></div>
 </div>
 <section id="matplotlib-and-seaborn">
-<h2>Matplotlib and Seaborn<a class="headerlink" href="#matplotlib-and-seaborn" title="Permalink to this heading">#</a></h2>
+<h2>Matplotlib and Seaborn<a class="headerlink" href="#matplotlib-and-seaborn" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">Seaborn</span></code> are both plotting libraries useful for making graphs in Python. They both support a variety of different types of plots, and we shall give examples of various plots in each below. We have imported both the libraries at the top of the subchapter. Importantly, in order to view <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plots in Jupyter notebooks, you have to include the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> command we used above (this is a line magic command used by Jupyter notebooks, read more <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">here</a>). As always, you are encouraged to read <a class="reference external" href="https://matplotlib.org/stable/"><code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code>’s</a> and <a class="reference external" href="https://seaborn.pydata.org/"><code class="docutils literal notranslate"><span class="pre">Seaborn</span></code>’s</a> documentation.</p>
 <p>Fun fact: <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is actually built on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to make creating basic plots simpler and require less code. All <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plots are by definition also <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> plots. For example, when you’re plotting two variables from the same DataFrame against each other:</p>
 <ul class="simple">
@@ -715,7 +736,7 @@ document.write(`
 </ul>
 <p>Small things like this can help save a lot of time when producing quick plots. However, <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is less customizable than <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and cannot produce all the plots <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> can.</p>
 <section id="matplotlib-plot-customizations">
-<h3>Matplotlib Plot Customizations<a class="headerlink" href="#matplotlib-plot-customizations" title="Permalink to this heading">#</a></h3>
+<h3>Matplotlib Plot Customizations<a class="headerlink" href="#matplotlib-plot-customizations" title="Link to this heading">#</a></h3>
 <p>Regardless of the type of plot and the library you choose to create the plot, you should always give it a title, set axis labels, etc. There are several miscellaneous function calls you can use to set these settings regardless of plot. As <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> is built on top of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, these commands don’t differ between these two packages. We have listed a few of these commands below, but the list is not at all comprehensive. Read <a class="reference external" href="https://matplotlib.org/stable/api/pyplot_summary.html">here</a> for more details.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title"><code class="docutils literal notranslate"><span class="pre">plt.title()</span></code></a>: Set a title.</p></li>
@@ -730,7 +751,7 @@ document.write(`
 </section>
 </section>
 <section id="bar-charts">
-<h2>Bar Charts<a class="headerlink" href="#bar-charts" title="Permalink to this heading">#</a></h2>
+<h2>Bar Charts<a class="headerlink" href="#bar-charts" title="Link to this heading">#</a></h2>
 <p>Although our dataset has complete information for several metrics for each of the 25 regions, it doesn’t have data on the exact same metrics for each region. We have a lot more data from some regions than from others, as can be seen from the <code class="docutils literal notranslate"><span class="pre">.value_counts()</span></code> below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -841,7 +862,7 @@ Name: Country Name, dtype: int64
 </div>
 </section>
 <section id="scatter-plots">
-<h2>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Permalink to this heading">#</a></h2>
+<h2>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Link to this heading">#</a></h2>
 <p>Scatter plots are used to visualize the relationship between two numerical variables. They help us infer the association between two variables. The association between two variables refers to how one variable changes with respect to the other.  We can describe the association between two variables based on two factors:</p>
 <ol class="arabic simple">
 <li><p><em>Magnitude:</em> Is the association strong or weak? If the points on the scatter plot all line up along a straight line (in any direction), it means that the association between the variables is strong. On the other hand, if the points are all spread out and scattered (no pun intended), it means that the association is weak.</p></li>
@@ -1030,7 +1051,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 <p>With the help of these hover points, we can see that we have trended closer to gender equality in primary school enrollment over time. Great news!</p>
 </section>
 <section id="line-plots">
-<h2>Line Plots<a class="headerlink" href="#line-plots" title="Permalink to this heading">#</a></h2>
+<h2>Line Plots<a class="headerlink" href="#line-plots" title="Link to this heading">#</a></h2>
 <p>A line plot is used to display data as a series of points connected by a line. It’s generally used to visualize how a variable changes over time (also known as <a class="reference external" href="https://www.investopedia.com/terms/t/timeseries.asp">time series data</a>), often with a time-related variable on the x-axis (minutes, days, months, years, etc.) and a numerical variable on the y-axis.</p>
 <p>For example, let’s create a line plot to see how the total enrollment rate in primary school (across both sexes) changed from 1970 to 2014. We’ve done this below with <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <div class="cell docutils container">
@@ -1069,7 +1090,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 <p>It appears that more people are being enrolled in primary school over time, great news!</p>
 </section>
 <section id="histograms-box-plots-and-violin-plots">
-<h2>Histograms, Box Plots and Violin Plots<a class="headerlink" href="#histograms-box-plots-and-violin-plots" title="Permalink to this heading">#</a></h2>
+<h2>Histograms, Box Plots and Violin Plots<a class="headerlink" href="#histograms-box-plots-and-violin-plots" title="Link to this heading">#</a></h2>
 <p>Histograms, box plots and violin plots are all ways to visualize the distribution of a single quantitative variable. They help you understand the spread of values in the data. To help explain these, we will import in another dataset on education from the World Bank.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1391,7 +1412,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 </div></div></div>
 </div>
 <section id="histograms">
-<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this heading">#</a></h3>
+<h3>Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h3>
 <p>Histograms look quite similar to bar charts, but have a few differences. Histograms follow the <em>area principle</em> and have two defining properties:</p>
 <ol class="arabic simple">
 <li><p>As the values on the horizontal axis are numerical and therefore have fixed positions on the number line, the bins are drawn to scale and are contiguous (though some might be empty).</p></li>
@@ -1415,7 +1436,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 </div>
 </section>
 <section id="box-plots-and-violin-plots">
-<h3>Box Plots and Violin Plots<a class="headerlink" href="#box-plots-and-violin-plots" title="Permalink to this heading">#</a></h3>
+<h3>Box Plots and Violin Plots<a class="headerlink" href="#box-plots-and-violin-plots" title="Link to this heading">#</a></h3>
 <p>A boxplot is similar to a histogram as it also visualizes the distribution of a numerical variable, but it gives you more specific statistics about the distribution: the minimum, lower quartile (value at the bottom 25th percentile), median (value at the 50th percentile), upper quartile (value at the top 25th percentile) and maximum. These values are all denoted by horizontal lines, and the interquartile range (area between the 25th and 75th percentiles) is shaded.</p>
 <p>Let us visualize the same data as above, but with a boxplot instead.</p>
 <div class="cell docutils container">
@@ -1446,10 +1467,10 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 </div>
 </section>
 <section id="overlaid-histograms-and-side-by-side-box-and-violin-plots">
-<h3>Overlaid Histograms and Side-by-Side Box and Violin Plots.<a class="headerlink" href="#overlaid-histograms-and-side-by-side-box-and-violin-plots" title="Permalink to this heading">#</a></h3>
+<h3>Overlaid Histograms and Side-by-Side Box and Violin Plots.<a class="headerlink" href="#overlaid-histograms-and-side-by-side-box-and-violin-plots" title="Link to this heading">#</a></h3>
 <p>To compare a quantitative distribution across the different categories of a qualitative categorical variable, we can overlay histograms or plot side-by-side box and violin plots. Examples of all of those have been done below to visualize the difference in primary school completion rate for females vs males.</p>
 <section id="overlaid-histograms">
-<h4>Overlaid Histograms<a class="headerlink" href="#overlaid-histograms" title="Permalink to this heading">#</a></h4>
+<h4>Overlaid Histograms<a class="headerlink" href="#overlaid-histograms" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_female</span> <span class="o">=</span> <span class="n">wb_df_2</span><span class="p">[</span><span class="s1">&#39;Primary completion rate: Female: </span><span class="si">% o</span><span class="s1">f relevant age group: 2015&#39;</span><span class="p">]</span>
@@ -1473,7 +1494,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 </div>
 </section>
 <section id="side-by-side-box-plots">
-<h4>Side-by-Side Box Plots<a class="headerlink" href="#side-by-side-box-plots" title="Permalink to this heading">#</a></h4>
+<h4>Side-by-Side Box Plots<a class="headerlink" href="#side-by-side-box-plots" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">wb_df_2</span><span class="p">[[</span><span class="s1">&#39;Primary completion rate: Female: </span><span class="si">% o</span><span class="s1">f relevant age group: 2015&#39;</span><span class="p">,</span>
@@ -1491,7 +1512,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
 </div>
 </section>
 <section id="side-by-side-violin-plots">
-<h4>Side-by-Side Violin Plots<a class="headerlink" href="#side-by-side-violin-plots" title="Permalink to this heading">#</a></h4>
+<h4>Side-by-Side Violin Plots<a class="headerlink" href="#side-by-side-violin-plots" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">wb_df_2</span><span class="p">[[</span><span class="s1">&#39;Primary completion rate: Female: </span><span class="si">% o</span><span class="s1">f relevant age group: 2015&#39;</span><span class="p">,</span>
@@ -1540,7 +1561,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -1550,6 +1571,7 @@ e.exports=function(t){return null!=t&&(n(t)||function(t){return"function"==typeo
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1596,9 +1618,10 @@ By Rohan Jha
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1622,8 +1645,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
