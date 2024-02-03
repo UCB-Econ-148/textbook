@@ -1551,6 +1551,25 @@ pollution.hist(column=&#39;co2pc&#39;,bins=80);
 <p>Used for running regressions. Note that not all features from Stata’s <code class="docutils literal notranslate"><span class="pre">reg</span></code> command are supported. Examples include:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;reg wage exp&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import statsmodels.api as sm
+df_no_na = df[[&#39;exp&#39;,&#39;wage&#39;]].dropna()
+x_df = df_no_na[&#39;exp&#39;]
+y_df = df_no_na[&#39;wage&#39;]
+model = sm.OLS(y_df, sm.add_constant(x_df))
+result = model.fit()
+result.summary()
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;reg wage exp, vce(cluster education)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
