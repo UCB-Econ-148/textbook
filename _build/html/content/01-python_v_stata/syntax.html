@@ -772,15 +772,12 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import numpy as np
 from scipy import stats
+### First, we must filter the DataFrame to obtain the right values
 catvar_vals = np.unique(df[&#39;guard&#39;])
-if len(catvar_vals) != 2:
-    raise ValueError(f&#39;The categorical variable (guard) doesn\&#39;t have 2 groups&#39;)
 df_1 = df[df[&#39;guard&#39;] == catvar_vals[0]]
 df_2 = df[df[&#39;guard&#39;] == catvar_vals[1]]
-ttest = stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=True, nan_policy=&#39;propagate&#39;)
-t_stat = ttest.statistic
-p_val = ttest.pvalue
-print(f&#39;T-stat: {t_stat}, P-value: {p_val}&#39;)
+### Then, we can run our t-test
+stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=True, nan_policy=&#39;propagate&#39;)
 </pre></div>
 </div>
 </div>
@@ -795,15 +792,12 @@ print(f&#39;T-stat: {t_stat}, P-value: {p_val}&#39;)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import numpy as np
 from scipy import stats
+### First, we must filter the DataFrame to obtain the right values
 catvar_vals = np.unique(nba[&#39;guard&#39;])
-if len(catvar_vals) != 2:
-    raise ValueError(f&#39;The categorical variable (guard) doesn\&#39;t have 2 groups&#39;)
 df_1 = nba[nba[&#39;guard&#39;] == catvar_vals[0]]
 df_2 = nba[nba[&#39;guard&#39;] == catvar_vals[1]]
-ttest = stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=False, nan_policy=&#39;propagate&#39;)
-t_stat = ttest.statistic
-p_val = ttest.pvalue
-print(f&#39;T-stat: {t_stat}, P-value: {p_val}&#39;)
+### Then, we can run our t-test
+stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=False, nan_policy=&#39;propagate&#39;)
 </pre></div>
 </div>
 </div>
@@ -814,20 +808,17 @@ print(f&#39;T-stat: {t_stat}, P-value: {p_val}&#39;)
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="c1">### First, we must filter the DataFrame to obtain the right values</span>
 <span class="n">catvar_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">])</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">catvar_vals</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The categorical variable (guard) doesn</span><span class="se">\&#39;</span><span class="s1">t have 2 groups&#39;</span><span class="p">)</span>
 <span class="n">df_1</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
 <span class="n">df_2</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-<span class="n">ttest</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">df_2</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
-<span class="n">t_stat</span> <span class="o">=</span> <span class="n">ttest</span><span class="o">.</span><span class="n">statistic</span>
-<span class="n">p_val</span> <span class="o">=</span> <span class="n">ttest</span><span class="o">.</span><span class="n">pvalue</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;T-stat: </span><span class="si">{</span><span class="n">t_stat</span><span class="si">}</span><span class="s1">, P-value: </span><span class="si">{</span><span class="n">p_val</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="c1">### Then, we can run our t-test</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">df_2</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>T-stat: 2.1432820571177977, P-value: 0.03299634994484977
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=2.1432820571177977, pvalue=0.03299634994484977, df=266.3682612357414)
 </pre></div>
 </div>
 </div>
@@ -1548,25 +1539,101 @@ pollution.hist(column=&#39;co2pc&#39;,bins=80);
 </section>
 <section id="regressions">
 <h4>Regressions<a class="headerlink" href="#regressions" title="Permalink to this heading">#</a></h4>
-<p>Used for running regressions. Note that not all features from Stata’s <code class="docutils literal notranslate"><span class="pre">reg</span></code> command are supported. Examples include:</p>
+<p>Used for running regressions, including Python comments to help explain relevant portions of the code. Note that not all features from Stata’s <code class="docutils literal notranslate"><span class="pre">reg</span></code> command are supported. Examples include:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;reg wage exp&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;reg wage exp&quot;</span><span class="p">,</span> <span class="s2">&quot;wages&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import statsmodels.api as sm
-df_no_na = df[[&#39;exp&#39;,&#39;wage&#39;]].dropna()
-x_df = df_no_na[&#39;exp&#39;]
-y_df = df_no_na[&#39;wage&#39;]
+### Dropping NaN/missing values
+wages_no_na = wages[[&#39;exp&#39;,&#39;wage&#39;]].dropna()
+### Below, we extract the relevant variables from the DataFrame
+x_df = wages_no_na[&#39;exp&#39;]
+y_df = wages_no_na[&#39;wage&#39;]
+### We now define the model, fit it to the data and then view a summary of the results
 model = sm.OLS(y_df, sm.add_constant(x_df))
 result = model.fit()
 result.summary()
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Verifying that the output works</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="c1">### Dropping NaN/missing values</span>
+<span class="n">wages_no_na</span> <span class="o">=</span> <span class="n">wages</span><span class="p">[[</span><span class="s1">&#39;exp&#39;</span><span class="p">,</span><span class="s1">&#39;wage&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="c1">### Below, we extract the relevant variables from the DataFrame</span>
+<span class="n">x_df</span> <span class="o">=</span> <span class="n">wages_no_na</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span>
+<span class="n">y_df</span> <span class="o">=</span> <span class="n">wages_no_na</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">]</span>
+<span class="c1">### We now define the model, fit it to the data and then view a summary of the results</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y_df</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x_df</span><span class="p">))</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">result</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>          <td>wage</td>       <th>  R-squared:         </th> <td>   0.001</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>  -0.001</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>  0.4714</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Sat, 03 Feb 2024</td> <th>  Prob (F-statistic):</th>  <td> 0.493</td> 
+</tr>
+<tr>
+  <th>Time:</th>                 <td>12:22:48</td>     <th>  Log-Likelihood:    </th> <td> -3541.0</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   863</td>      <th>  AIC:               </th> <td>   7086.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   861</td>      <th>  BIC:               </th> <td>   7096.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th> <td>   16.0816</td> <td>    3.917</td> <td>    4.105</td> <td> 0.000</td> <td>    8.393</td> <td>   23.771</td>
+</tr>
+<tr>
+  <th>exp</th>   <td>   -0.2135</td> <td>    0.311</td> <td>   -0.687</td> <td> 0.493</td> <td>   -0.824</td> <td>    0.397</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>1263.062</td> <th>  Durbin-Watson:     </th>  <td>   1.830</td> 
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th>  <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>413853.334</td>
+</tr>
+<tr>
+  <th>Skew:</th>           <td> 8.176</td>  <th>  Prob(JB):          </th>  <td>    0.00</td> 
+</tr>
+<tr>
+  <th>Kurtosis:</th>       <td>109.028</td> <th>  Cond. No.          </th>  <td>    99.5</td> 
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1577,11 +1644,15 @@ result.summary()
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import statsmodels.api as sm
+### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. 
 y_var = &quot;wage&quot;
 clustering_vars = [&#39;education&#39;]
+### Dropping NaN/missing values
 df_no_na = df[[&#39;exp&#39;, &#39;education&#39;,&#39;wage&#39;]].dropna()
+### Below, we extract the relevant variables from the DataFrame
 x_df = df_no_na[&#39;exp&#39;]
 y_df = df_no_na[&#39;wage&#39;]
+### We now define the model, fit it to the data and then view a summary of the results
 model = sm.OLS(y_df, sm.add_constant(x_df))
 result = model.fit(cov_type=&#39;cluster&#39;, cov_kwds={&#39;groups&#39;: df_no_na[&#39;education&#39;]})
 result.summary()
@@ -1598,11 +1669,13 @@ result.summary()
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import statsmodels.api as sm
+### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. 
 y_var = &quot;wage&quot;
 clustering_vars = [&#39;education&#39;]
 wages_with_dummies = wages.copy()
 x_var = &quot;&#39;exp&#39;, &#39;i.female&#39;&quot;
 x_var_new = &quot;&#39;&quot; + &quot;&#39;, &#39;&quot;.join([i.strip(&quot;&#39;&quot;) for i in x_var.split(&quot;, &quot;) if not i.strip(&quot;&#39;&quot;).startswith(&quot;i.&quot;)]) + &quot;&#39;&quot;
+### The below section adds in relevant indicator variables, ensuring they have interpretable names
 indicator_list = [m.strip(&quot;&#39;&quot;) for m in x_var.split(&#39;i.&#39;)[1:]]
 for indicator in indicator_list:
     dummies = pd.get_dummies(wages_with_dummies[indicator])
@@ -1611,12 +1684,16 @@ for indicator in indicator_list:
     wages_with_dummies = pd.concat([wages_with_dummies,dummies],axis=1)
     x_var_new = x_var_new + &quot;, &#39;&quot; + &quot;&#39;, &#39;&quot;.join(dummies.columns) + &quot;&#39;&quot;
 x_var = x_var_new
+### This helps ensure the clustered variables are extracted from the DataFrame
 if clustering_vars:
     x_var_temp = x_var + &quot;, &#39;&quot; + &quot;&#39;, &#39;&quot;.join(clustering_vars) + &quot;&#39;&quot;
 var_list = x_var_temp +&quot;, &#39;&quot;+ str(y_var) + &quot;&#39;&quot;
+### Dropping NaN/missing values
 wages_with_dummies_no_na = wages_with_dummies[[i.strip(&quot;&#39;&quot;) for i in var_list.split(&quot;, &quot;)]].dropna()
+### Below, we extract the relevant variables from the DataFrame
 x_df = wages_with_dummies_no_na[[i.strip(&quot;&#39;&quot;) for i in x_var.split(&quot;, &quot;)]]
 y_df = wages_with_dummies_no_na[&#39;wage&#39;]
+### We now define the model, fit it to the data and then view a summary of the results
 model = sm.OLS(y_df, sm.add_constant(x_df))
 result = model.fit(cov_type=&#39;cluster&#39;, cov_kwds={&#39;groups&#39;: wages_with_dummies_no_na[&#39;education&#39;]})
 result.summary()
@@ -1628,11 +1705,13 @@ result.summary()
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Verifying that the output works</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="c1">### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. </span>
 <span class="n">y_var</span> <span class="o">=</span> <span class="s2">&quot;wage&quot;</span>
 <span class="n">clustering_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span>
 <span class="n">wages_with_dummies</span> <span class="o">=</span> <span class="n">wages</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">x_var</span> <span class="o">=</span> <span class="s2">&quot;&#39;exp&#39;, &#39;i.female&#39;&quot;</span>
 <span class="n">x_var_new</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&#39;, &#39;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_var</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;i.&quot;</span><span class="p">)])</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span>
+<span class="c1">### The below section adds in relevant indicator variables, ensuring they have interpretable names</span>
 <span class="n">indicator_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">x_var</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;i.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]]</span>
 <span class="k">for</span> <span class="n">indicator</span> <span class="ow">in</span> <span class="n">indicator_list</span><span class="p">:</span>
     <span class="n">dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">wages_with_dummies</span><span class="p">[</span><span class="n">indicator</span><span class="p">])</span>
@@ -1641,12 +1720,16 @@ result.summary()
     <span class="n">wages_with_dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wages_with_dummies</span><span class="p">,</span><span class="n">dummies</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">x_var_new</span> <span class="o">=</span> <span class="n">x_var_new</span> <span class="o">+</span> <span class="s2">&quot;, &#39;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&#39;, &#39;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dummies</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span>
 <span class="n">x_var</span> <span class="o">=</span> <span class="n">x_var_new</span>
+<span class="c1">### This helps ensure the clustered variables are extracted from the DataFrame</span>
 <span class="k">if</span> <span class="n">clustering_vars</span><span class="p">:</span>
     <span class="n">x_var_temp</span> <span class="o">=</span> <span class="n">x_var</span> <span class="o">+</span> <span class="s2">&quot;, &#39;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&#39;, &#39;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">clustering_vars</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span>
 <span class="n">var_list</span> <span class="o">=</span> <span class="n">x_var_temp</span> <span class="o">+</span><span class="s2">&quot;, &#39;&quot;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_var</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&#39;&quot;</span>
+<span class="c1">### Dropping NaN/missing values</span>
 <span class="n">wages_with_dummies_no_na</span> <span class="o">=</span> <span class="n">wages_with_dummies</span><span class="p">[[</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">var_list</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="c1">### Below, we extract the relevant variables from the DataFrame</span>
 <span class="n">x_df</span> <span class="o">=</span> <span class="n">wages_with_dummies_no_na</span><span class="p">[[</span><span class="n">i</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x_var</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">)]]</span>
 <span class="n">y_df</span> <span class="o">=</span> <span class="n">wages_with_dummies_no_na</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">]</span>
+<span class="c1">### We now define the model, fit it to the data and then view a summary of the results</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y_df</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x_df</span><span class="p">))</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cov_type</span><span class="o">=</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span> <span class="n">cov_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;groups&#39;</span><span class="p">:</span> <span class="n">wages_with_dummies_no_na</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]})</span>
 <span class="n">result</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
@@ -1666,10 +1749,10 @@ result.summary()
   <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   1.993</td>
 </tr>
 <tr>
-  <th>Date:</th>             <td>Tue, 30 Jan 2024</td> <th>  Prob (F-statistic):</th>  <td> 0.183</td> 
+  <th>Date:</th>             <td>Sat, 03 Feb 2024</td> <th>  Prob (F-statistic):</th>  <td> 0.183</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>23:31:55</td>     <th>  Log-Likelihood:    </th> <td> -3538.0</td>
+  <th>Time:</th>                 <td>12:21:57</td>     <th>  Log-Likelihood:    </th> <td> -3538.0</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   863</td>      <th>  AIC:               </th> <td>   7082.</td>
