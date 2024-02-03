@@ -165,7 +165,14 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02-prereqs/index.html">Prerequisites</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01-python_v_stata/index.html">Python vs Stata</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01-python_v_stata/history.html">History of the Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-python_v_stata/differences.html">Summary of Differences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-python_v_stata/install.html">Installation and General Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01-python_v_stata/syntax.html">Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-prereqs/index.html">Prerequisites</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/python.html">Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/jupyter.html">Jupyter Notebooks</a></li>
 
@@ -173,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/numpy.html">Numpy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03-pandas/index.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-pandas/index.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/loading-looking.html">Loading in and Looking at the Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/select_modify.html">Selecting and Modifying Rows/Columns</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/misc_funcs.html">Helpful Pandas Methods</a></li>
@@ -181,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/merge.html">Joins</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Visualizations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Visualizations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Choosing the Right Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types.html">Basic Visualizations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="advanced.html">More Advanced Visualizations</a></li>
@@ -352,7 +359,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="choosing-the-right-plot">
 <h1>Choosing the Right Plot<a class="headerlink" href="#choosing-the-right-plot" title="Permalink to this heading">#</a></h1>
 <p>Choosing the right plot to make to visualize your data is crucial for making good data visualizations. The type of plot you should make should be closely informed by the types of variables you’re attempting to visualize. Here’s a quick visualization from <a class="reference external" href="https://ds100.org/">UC Berkeley’s Data 100</a> on types of variables.</p>
-<p><img alt="vars" src="../../_images/var_types.png" /></p>
+<p><img alt="vars" src="../../_images/var_types1.png" /></p>
 <p>Here’s a quick description of each type of variable:</p>
 <ul class="simple">
 <li><p><strong>Quantitative Continuous:</strong> Numerical data that can take any value within a range. It has an infinite number of possible values within any given interval. Economic examples include <a class="reference external" href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm#:~:text=Gross%20domestic%20product%20(GDP)%20is,and%20services%20(less%20imports).">GDP</a>, <a class="reference external" href="https://www.investopedia.com/terms/c/consumerpriceindex.asp">CPI</a>, inflation rate, etc.</p></li>

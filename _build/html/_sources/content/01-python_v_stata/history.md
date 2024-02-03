@@ -4,7 +4,7 @@ This subchapter will discuss the history of how Python and Stata were created, a
 
 ###### <span style="color:red"> To be updated; from ChatGPT </span>
 
-## History of Python:
+## History of Python
 
 Python is a high-level, interpreted programming language that was created by Guido van Rossum. The language's development began in the late 1980s, and the first official Python release, version 0.9.0, came out in February 1991. Guido van Rossum aimed to create a language that emphasized code readability and ease of use, inspired by the ABC language.
 
@@ -12,7 +12,7 @@ The name "Python" was chosen as a tribute to the British comedy group Monty Pyth
 
 Python gained popularity due to its simplicity, readability, and versatility. It became widely used in various domains, including web development, data science, artificial intelligence, and more. Python's extensive standard library and a vibrant community of developers contributed to its success.
 
-## History of Stata:
+## History of Stata
 
 Stata is a statistical software package designed for data analysis, manipulation, and visualization. It was developed by StataCorp, founded by William Gould, James Hardin, and Cleve Moler. Stata's development began in the early 1980s, with the first version, Stata 1.0, released in 1985.
 
