@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/01-python_v_stata/syntax';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Prerequisites" href="../02-prereqs/index.html" />
+    <link rel="next" title="Economics Pedagogy" href="pedagogy.html" />
     <link rel="prev" title="Installation and General Usage" href="install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,6 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="differences.html">Summary of Differences</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html">Installation and General Usage</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pedagogy.html">Economics Pedagogy</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../02-prereqs/index.html">Prerequisites</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -1594,7 +1595,7 @@ result.summary()
   <th>Date:</th>             <td>Sat, 03 Feb 2024</td> <th>  Prob (F-statistic):</th>  <td> 0.493</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>12:22:48</td>     <th>  Log-Likelihood:    </th> <td> -3541.0</td>
+  <th>Time:</th>                 <td>12:28:34</td>     <th>  Log-Likelihood:    </th> <td> -3541.0</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   863</td>      <th>  AIC:               </th> <td>   7086.</td>
@@ -1644,7 +1645,9 @@ result.summary()
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import statsmodels.api as sm
-### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. 
+### We first perform some string manipulations to ensure we are appropripately accounting for strings. 
+### This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python.
+### You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly.
 y_var = &quot;wage&quot;
 clustering_vars = [&#39;education&#39;]
 ### Dropping NaN/missing values
@@ -1669,7 +1672,9 @@ result.summary()
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 import statsmodels.api as sm
-### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. 
+### We first perform some string manipulations to ensure we are appropripately accounting for strings. 
+### This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python.
+### You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly.
 y_var = &quot;wage&quot;
 clustering_vars = [&#39;education&#39;]
 wages_with_dummies = wages.copy()
@@ -1705,7 +1710,9 @@ result.summary()
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Verifying that the output works</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="c1">### We first perform some string manipulations to ensure we are appropripately accounting for strings. This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python. You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly. </span>
+<span class="c1">### We first perform some string manipulations to ensure we are appropripately accounting for strings. </span>
+<span class="c1">### This section seems complicated as this code is meant to be a general-purpose code for converting the Stata commands to Python.</span>
+<span class="c1">### You can greatly simplify this step if you know exactly which variables you are interested in; simply extract those variables from the DataFrame directly.</span>
 <span class="n">y_var</span> <span class="o">=</span> <span class="s2">&quot;wage&quot;</span>
 <span class="n">clustering_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span>
 <span class="n">wages_with_dummies</span> <span class="o">=</span> <span class="n">wages</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -1752,7 +1759,7 @@ result.summary()
   <th>Date:</th>             <td>Sat, 03 Feb 2024</td> <th>  Prob (F-statistic):</th>  <td> 0.183</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>12:21:57</td>     <th>  Log-Likelihood:    </th> <td> -3538.0</td>
+  <th>Time:</th>                 <td>12:29:00</td>     <th>  Log-Likelihood:    </th> <td> -3538.0</td>
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   863</td>      <th>  AIC:               </th> <td>   7082.</td>
@@ -1841,11 +1848,11 @@ result.summary()
       </div>
     </a>
     <a class="right-next"
-       href="../02-prereqs/index.html"
+       href="pedagogy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prerequisites</p>
+        <p class="prev-next-title">Economics Pedagogy</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

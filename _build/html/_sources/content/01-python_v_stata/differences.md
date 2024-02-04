@@ -8,7 +8,7 @@ Python is a versatile, general-purpose programming language that can be used for
 
 ## Syntax
 
-Python has a general syntax, allowing for multiple programming paradigms, including procedural, object-oriented, and functional programming. This flexibility allows users to adopt different coding styles and adapt Python to various application domains. In contrast, Stata has a special command-driven syntax which works best for statistical analysis. This syntax is also designed to be intuitive and user-friendly, allowing it's users to focus moreso on the results.
+Python has a general syntax, allowing for multiple programming paradigms, including procedural, object-oriented, and functional programming. This flexibility allows users to adopt different coding styles and adapt Python to various application domains. In contrast, Stata has a special command-driven syntax which works best for statistical analysis. This syntax is also designed to be intuitive and user-friendly, allowing it's users to focus moreso on the results. See the [Syntax subchapter](syntax.ipynb) for more information.
 
 ## Packages/Libraries
 
