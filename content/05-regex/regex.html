@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>RegEx &#8212; Python for Economists</title>
   
@@ -19,53 +18,57 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=6927bdd9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../_static/plotly.min.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/05-regex/regex';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/plotly.min.js?v=7525fa7a"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="APIs" href="../06-api/api.html" />
@@ -79,10 +82,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +125,14 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +147,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -154,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -305,6 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -314,6 +332,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -370,7 +389,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -381,7 +400,7 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="regex">
-<h1>RegEx<a class="headerlink" href="#regex" title="Permalink to this heading">#</a></h1>
+<h1>RegEx<a class="headerlink" href="#regex" title="Link to this heading">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">RegEx</span></code>, standing for regular expressions, are a powerful tool used to search through large bodies of text. Using RegEx, you can essentially specify patterns you are looking for and get all the substrings which match that pattern. This subchapter will go over how to use RegEx in Python.</p>
 <p>As always, this chapter is not comprehensive and not a good substitute for plenty of practice! There are a ton of resources for learning RegEx, some of them are: -</p>
 <ul class="simple">
@@ -394,7 +413,7 @@ document.write(`
 </li>
 </ul>
 <section id="regex-syntax">
-<h2>RegEx Syntax<a class="headerlink" href="#regex-syntax" title="Permalink to this heading">#</a></h2>
+<h2>RegEx Syntax<a class="headerlink" href="#regex-syntax" title="Link to this heading">#</a></h2>
 <!-- | Operation      | Order  | Syntax Example | Matches     | Doesn't Match     | 
 |----------------|-|----------------|-------------|-------------------|
 | `Or`: `\|`  | 4 | AA\|BAAB        | AA<br /> BAAB   | every other string|
@@ -463,7 +482,7 @@ document.write(`
 </div>
 </div>
 <section id="quantifiers">
-<h3>Quantifiers<a class="headerlink" href="#quantifiers" title="Permalink to this heading">#</a></h3>
+<h3>Quantifiers<a class="headerlink" href="#quantifiers" title="Link to this heading">#</a></h3>
 <p>There are several ways of telling RegEx how many of a character we want. They are summarized below:</p>
 <table class="table">
 <thead>
@@ -509,7 +528,7 @@ document.write(`
 </table>
 <p>Something important to note in the above table is that all of these operators only apply to just the preceding character. So, <code class="docutils literal notranslate"><span class="pre">eric*</span></code> will match <em>eri</em> and <em>ericc</em> but not <em>eriicc</em> or <em>erii</em>. If we also wanted to match <em>eriicc</em> or <em>erii</em>, we could use character classes.</p>
 <section id="greediness">
-<h4>Greediness<a class="headerlink" href="#greediness" title="Permalink to this heading">#</a></h4>
+<h4>Greediness<a class="headerlink" href="#greediness" title="Link to this heading">#</a></h4>
 <p>RegEx operations are greedy, meaning they look for the longest possible match in a string. For example, given the string <em>ab</em>, the RegEx pattern <code class="docutils literal notranslate"><span class="pre">.*</span></code> could match <em>a</em>, <em>b</em>, <em>ab</em>, or nothing at all. However, because it wants the longest match possible, it will choose to match <em>ab</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -554,7 +573,7 @@ document.write(`
 </section>
 </section>
 <section id="character-classes">
-<h3>Character Classes<a class="headerlink" href="#character-classes" title="Permalink to this heading">#</a></h3>
+<h3>Character Classes<a class="headerlink" href="#character-classes" title="Link to this heading">#</a></h3>
 <p>RegEx character classes help us match any one character from a list of characters. They are often denoted by a list of characters surrounded by hard brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>). For example, <em>er[ic]*</em> will match <em>eri</em>, <em>ericc</em>, <em>eriicc</em> and <em>erii</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -640,7 +659,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">\W</span></code>, <code class="docutils literal notranslate"><span class="pre">\D</span></code>, and <code class="docutils literal notranslate"><span class="pre">\S</span></code> are the complements (match the exact opposite things) of <code class="docutils literal notranslate"><span class="pre">\w</span></code>, <code class="docutils literal notranslate"><span class="pre">\d</span></code>, and <code class="docutils literal notranslate"><span class="pre">\s</span></code> respectively.</p>
 </section>
 <section id="positions">
-<h3>Positions<a class="headerlink" href="#positions" title="Permalink to this heading">#</a></h3>
+<h3>Positions<a class="headerlink" href="#positions" title="Link to this heading">#</a></h3>
 <p>When discussing character classes, we’d mentioned how <code class="docutils literal notranslate"><span class="pre">^</span></code> can be used to negate a character class. However, <code class="docutils literal notranslate"><span class="pre">^</span></code> actually has two uses. If the <code class="docutils literal notranslate"><span class="pre">^</span></code> is not in the middle of a bracket and preceded by <code class="docutils literal notranslate"><span class="pre">[</span></code>, it instead represents a position at the beginning of a string. For example, the pattern <code class="docutils literal notranslate"><span class="pre">^a</span></code> will contain a match in <code class="docutils literal notranslate"><span class="pre">all</span></code> but not in <code class="docutils literal notranslate"><span class="pre">ball</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -673,7 +692,7 @@ None
 </div>
 </section>
 <section id="escape">
-<h3>Escape<a class="headerlink" href="#escape" title="Permalink to this heading">#</a></h3>
+<h3>Escape<a class="headerlink" href="#escape" title="Link to this heading">#</a></h3>
 <p>The escape character <code class="docutils literal notranslate"><span class="pre">\</span></code> is used to take special characters and turn them into literal ones. For example, the character <code class="docutils literal notranslate"><span class="pre">.</span></code> will match anything except a newline, but <code class="docutils literal notranslate"><span class="pre">\.</span></code> will only match <code class="docutils literal notranslate"><span class="pre">.</span></code> and nothing else.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -694,9 +713,9 @@ None
 </section>
 </section>
 <section id="using-regex-in-python">
-<h2>Using Regex in Python<a class="headerlink" href="#using-regex-in-python" title="Permalink to this heading">#</a></h2>
+<h2>Using Regex in Python<a class="headerlink" href="#using-regex-in-python" title="Link to this heading">#</a></h2>
 <section id="regex-library-functions">
-<h3>Regex Library Functions<a class="headerlink" href="#regex-library-functions" title="Permalink to this heading">#</a></h3>
+<h3>Regex Library Functions<a class="headerlink" href="#regex-library-functions" title="Link to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">regex</span></code> library of Python has several functions that are helpful for working with Python strings. Until now, we’ve been working with <code class="docutils literal notranslate"><span class="pre">re.search()</span></code>. <code class="docutils literal notranslate"><span class="pre">re.search()</span></code> takes in a RegEx pattern and a Python string, and returns the first match of the pattern within the string. It returns the match as a <code class="docutils literal notranslate"><span class="pre">regex.Match</span> <span class="pre">object</span></code>. <code class="docutils literal notranslate"><span class="pre">regex.Match</span> <span class="pre">object's</span></code> have 4 helpful methods:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.start()</span></code>: Returns the index where the match begins</p></li>
@@ -811,7 +830,7 @@ None
 <p>As always, this list is not comprehensive and you are encouraged to read the documentation for more details.</p>
 </section>
 <section id="capturing-groups">
-<h3>Capturing Groups<a class="headerlink" href="#capturing-groups" title="Permalink to this heading">#</a></h3>
+<h3>Capturing Groups<a class="headerlink" href="#capturing-groups" title="Link to this heading">#</a></h3>
 <p>Using <code class="docutils literal notranslate"><span class="pre">re.findall()</span></code> allows us to easily extract information from our string. Capturing groups can help us extract information further.</p>
 <p>For example, let us say we want to extract the numbers from the statement <em>There are 25 apples and 30 oranges</em>. We can design a pattern (such as <code class="docutils literal notranslate"><span class="pre">[a-zA-S\s]*\d+[a-zA-S\s]*</span></code>) which isolates the numbers, but then how do we extract them?</p>
 <div class="cell docutils container">
@@ -881,8 +900,8 @@ None
 </div>
 </section>
 <section id="integration-with-pandas-string-methods">
-<h3>Integration with <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> String Methods<a class="headerlink" href="#integration-with-pandas-string-methods" title="Permalink to this heading">#</a></h3>
-<p>RegEx patterns work very well with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference internal" href="../03-pandas/misc_funcs.html"><span class="doc std std-doc">string methods</span></a>. For example, the RegEx pattern <code class="docutils literal notranslate"><span class="pre">ssn_pattern</span></code> below matches all strings that follow the pattern of an American social security number (namely: 3 digits, dash, 2 digits, dash, 3 digits). Let us imagine you’ve surveyed a bunch of (American) people asking them their social security number. You’ve stored all their responses in the DataFrame <code class="docutils literal notranslate"><span class="pre">ssn_data</span></code> below. You can use <code class="docutils literal notranslate"><span class="pre">str.findall()</span></code> to extract all potential the social security numbers.</p>
+<h3>Integration with <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> String Methods<a class="headerlink" href="#integration-with-pandas-string-methods" title="Link to this heading">#</a></h3>
+<p>RegEx patterns work very well with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> <a class="reference internal" href="../03-pandas/misc_funcs.html"><span class="std std-doc">string methods</span></a>. For example, the RegEx pattern <code class="docutils literal notranslate"><span class="pre">ssn_pattern</span></code> below matches all strings that follow the pattern of an American social security number (namely: 3 digits, dash, 2 digits, dash, 3 digits). Let us imagine you’ve surveyed a bunch of (American) people asking them their social security number. You’ve stored all their responses in the DataFrame <code class="docutils literal notranslate"><span class="pre">ssn_data</span></code> below. You can use <code class="docutils literal notranslate"><span class="pre">str.findall()</span></code> to extract all potential the social security numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ssn_pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;[0-9]</span><span class="si">{3}</span><span class="s2">-[0-9]</span><span class="si">{2}</span><span class="s2">-[0-9]</span><span class="si">{4}</span><span class="s2">&quot;</span>
@@ -1153,7 +1172,7 @@ Name: SSN, Length: 80, dtype: object
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="../04-visualizations/advanced.html"
@@ -1181,6 +1200,7 @@ Name: SSN, Length: 80, dtype: object
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1225,9 +1245,10 @@ By Rohan Jha
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -1251,8 +1272,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
