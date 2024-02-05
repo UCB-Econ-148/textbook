@@ -68,6 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/01-python_v_stata/index';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="History of the Languages" href="history.html" />
+    <link rel="prev" title="Data Science for Economists" href="../intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,8 +164,16 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../02-prereqs/index.html">Prerequisites</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Python vs Stata</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="history.html">History of the Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="differences.html">Summary of Differences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation and General Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntax.html">Syntax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pedagogy.html">Economics Pedagogy</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02-prereqs/index.html">Prerequisites</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/python.html">Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/jupyter.html">Jupyter Notebooks</a></li>
 
@@ -171,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../02-prereqs/numpy.html">Numpy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../03-pandas/index.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-pandas/index.html">Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/loading-looking.html">Loading in and Looking at the Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/select_modify.html">Selecting and Modifying Rows/Columns</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/misc_funcs.html">Helpful Pandas Methods</a></li>
@@ -179,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../03-pandas/merge.html">Joins</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../04-visualizations/index.html">Visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04-visualizations/index.html">Visualizations</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../04-visualizations/choosing.html">Choosing the Right Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../04-visualizations/types.html">Basic Visualizations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../04-visualizations/advanced.html">More Advanced Visualizations</a></li>
@@ -339,8 +349,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-vs-stata">
 <h1>Python vs Stata<a class="headerlink" href="#python-vs-stata" title="Permalink to this heading">#</a></h1>
-<p>This chapter is intended to give you a brief overview of the differences between Python and Stata. We will cover the history of the programming languages, how they function and key differences regarding how they interact with data.</p>
+<p>Python and Stata are two of the most popular languages used for economics research (<a class="reference external" href="https://cepr.org/voxeu/columns/which-programming-language-best-economic-research-julia-matlab-python-or-r">source</a>). However, there are several key differences between them. Stata is a highly specialized language intended for mainly statistical analysis, while Python is a general-purpose programming language.</p>
+<p>This chapter is intended to give you a brief overview of the differences between Python and Stata. We will cover the history of the programming languages, how they function and key differences regarding how they interact with data. We hope that this chapter will help you determine which programming language is right for you. However, as the remainder of this textbook is written entirely in Python, the final subchapter (<code class="docutils literal notranslate"><span class="pre">Syntax</span></code>) will aim to help experienced Stata users become more familiar with Python.</p>
 <!-- For more information, please look at [Python's official page](https://www.python.org/) and [Stata's official page](https://www.stata.com/) respectively. -->
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -373,6 +386,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><a> Data Science for Economists </a></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="history.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">History of the Languages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

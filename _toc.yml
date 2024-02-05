@@ -2,12 +2,13 @@ format: jb-article
 root: content/intro
 title: Home
 sections:
-# - file: content/01-python_v_stata/index.md
-#   sections:
-#     - file: content/01-python_v_stata/history.md
-#     - file: content/01-python_v_stata/differences.md
-#     - file: content/01-python_v_stata/install.md
-#     - file: content/01-python_v_stata/syntax.md
+- file: content/01-python_v_stata/index.md
+  sections:
+    - file: content/01-python_v_stata/history.md
+    - file: content/01-python_v_stata/differences.md
+    - file: content/01-python_v_stata/install.md
+    - file: content/01-python_v_stata/syntax.ipynb
+    - file: content/01-python_v_stata/pedagogy.ipynb
 - file: content/02-prereqs/index.md
   sections:
       - file: content/02-prereqs/python.ipynb
