@@ -4,9 +4,7 @@ Data analysis is a key part of modern economics; economic theories must be teste
 
 ## A note on Python vs Stata
 
-This book teaches data science concepts using [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/). However, until recently, [Stata](https://www.stata.com/) was the primary language used for economic research. When the book is fully complete, it shall include two chapters comparing Python and Stata. These chapters shall have two aims:
-- inform young economists on the differences between the languages and help them convert from one language to the other.
-- compare Python and Stata from a pedagogical perspective.
+This book teaches data science concepts using [Python](https://www.python.org/) and [Jupyter](https://jupyter.org/). However, until recently, [Stata](https://www.stata.com/) was the primary language used for economic research. The first chapter compares the two languages from various points of view, while the subsequent chapters help beginner economists learn Python.
 
 ## Acknowledgements
 
