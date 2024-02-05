@@ -8,3 +8,4 @@ requests==2.28.1
 seaborn==0.12.2
 scipy
 jupyter-book
+stata2python
