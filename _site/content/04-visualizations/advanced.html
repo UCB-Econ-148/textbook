@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>More Advanced Visualizations &#8212; Python for Economists</title>
   
@@ -19,55 +18,59 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/style.css?v=6927bdd9" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../../_static/plotly.min.js"></script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_site/content/04-visualizations/advanced';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/plotly.min.js?v=7525fa7a"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -79,10 +82,9 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -123,11 +125,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../../../content/intro.html">
@@ -154,7 +162,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -305,6 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -314,6 +334,7 @@ document.write(`
   </button>
 `);
 </script>
+
 
 <script>
 document.write(`
@@ -360,7 +381,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -374,7 +395,7 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="more-advanced-visualizations">
-<h1>More Advanced Visualizations<a class="headerlink" href="#more-advanced-visualizations" title="Permalink to this heading">#</a></h1>
+<h1>More Advanced Visualizations<a class="headerlink" href="#more-advanced-visualizations" title="Link to this heading">#</a></h1>
 <p>This chapter shall discuss some more advanced visualization techniques. Let us begin by loading a World Bank dataset on education.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,7 +717,7 @@ document.write(`
 </div></div></div>
 </div>
 <section id="transformations">
-<h2>Transformations<a class="headerlink" href="#transformations" title="Permalink to this heading">#</a></h2>
+<h2>Transformations<a class="headerlink" href="#transformations" title="Link to this heading">#</a></h2>
 <p>It is very advantageous for us to have linear data, simply because linear lines are easy to interpret. Given a linear line, you can say easily interpret the slope as saying that ‘a 1 unit increase in the x-variable corresponds to a m-unit in the y-variable’, and you can interpret the intercept as saying ‘when the x-variable is 0, the y-variable is c’. However, we often have to work with data that doesn’t appear to be linear.</p>
 <p>Sometimes, when some data appears to not be linear, we can actually transform it so it has a linear relationship. For example, we plot the country’s gross national income (GNI) per capita vs their male adult literacy rate, and the plot does not appear linear at all.</p>
 <div class="cell docutils container">
@@ -748,14 +769,14 @@ document.write(`
 <p>This looks great! However, we made a logical leap there by knowing to take the log of the x-variable and raise the y-variable to the fourth power. How did we know to do this?</p>
 <p>Well, the honest answer is practice. Lots and lots of practice. However, there are helpful guides which can help you. For example, there is the Tukey-Mosteller Bulge Diagram, as shown below.</p>
 <section id="tukey-mosteller-bulge-diagram">
-<h3>Tukey-Mosteller Bulge Diagram<a class="headerlink" href="#tukey-mosteller-bulge-diagram" title="Permalink to this heading">#</a></h3>
+<h3>Tukey-Mosteller Bulge Diagram<a class="headerlink" href="#tukey-mosteller-bulge-diagram" title="Link to this heading">#</a></h3>
 <p><img alt="" src="../../../_images/tukey_mosteller.png" /></p>
 <p>In the diagram above, each curve represents a direction that your data can trend in. For example, our original adult literacy vs GNI graph was trending towards the top left, corresponding to the top-left of the Tukey-Mosteller diagram. Looking at the top left curve, we can see that it is surrounded by several suggestions, namely <span class="math notranslate nohighlight">\(\log{X}, \sqrt{X}, Y^2\)</span> and <span class="math notranslate nohighlight">\(Y^3\)</span>. Looking at the pattern, it seems like we want to transform the x-axis to increase slower and/or transform the y-axis to increase faster. From there, we can trial and error a bunch of different transformations until we find something that works! Note that we don’t have to use both a x-axis and a y-axis transformation, a lot of times just a single transformation is enough!</p>
 </section>
 </section>
 <section id="kernel-density-estimation">
-<h2>Kernel Density Estimation<a class="headerlink" href="#kernel-density-estimation" title="Permalink to this heading">#</a></h2>
-<p>A kernel density estimate (KDE) is a smooth, continuous function that is meant to give us a general idea of where the data lies along a dataset. You can think of it as attempting to approximate a histogram with a single line. For example, we can add a KDE on top of the histogram made in the <a class="reference internal" href="types.html"><span class="doc std std-doc">previous subchapter</span></a>.</p>
+<h2>Kernel Density Estimation<a class="headerlink" href="#kernel-density-estimation" title="Link to this heading">#</a></h2>
+<p>A kernel density estimate (KDE) is a smooth, continuous function that is meant to give us a general idea of where the data lies along a dataset. You can think of it as attempting to approximate a histogram with a single line. For example, we can add a KDE on top of the histogram made in the <a class="reference internal" href="types.html"><span class="std std-doc">previous subchapter</span></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">wb_df</span><span class="p">[</span><span class="s1">&#39;Primary completion rate: Female: </span><span class="si">% o</span><span class="s1">f relevant age group: 2015&#39;</span><span class="p">],</span><span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">);</span> 
@@ -850,7 +871,7 @@ document.write(`
 </div>
 </section>
 <section id="geospatial-data">
-<h2>Geospatial Data<a class="headerlink" href="#geospatial-data" title="Permalink to this heading">#</a></h2>
+<h2>Geospatial Data<a class="headerlink" href="#geospatial-data" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Geopandas</span></code> and <code class="docutils literal notranslate"><span class="pre">Plotly</span></code> can be used to make some awesome geospatial maps in pandas. Read <a class="reference external" href="https://towardsdatascience.com/visualizing-geospatial-data-in-python-e070374fe621">here</a> to learn more about plotting with <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> and read <a class="reference external" href="https://plotly.com/python/choropleth-maps/">here</a> to learn more about plotting with <code class="docutils literal notranslate"><span class="pre">plotly's</span> <span class="pre">chloropleth</span></code> maps.</p>
 </section>
 </section>
@@ -883,7 +904,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
 </div>
                 </footer>
@@ -893,6 +914,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -927,9 +949,10 @@ By Rohan Jha
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -953,8 +976,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
