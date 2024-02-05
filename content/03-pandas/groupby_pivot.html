@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>GroupBys and Pivot Tables &#8212; Python for Economists</title>
   
@@ -18,57 +19,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/style.css?v=6927bdd9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/03-pandas/groupby_pivot';</script>
+    <script src="../../_static/togglebutton.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../_static/plotly.min.js?v=7525fa7a"></script>
+    <script src="../../_static/plotly.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/03-pandas/groupby_pivot';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Joins" href="merge.html" />
@@ -82,9 +79,10 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
+
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -125,14 +123,11 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
-    </header>
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
-      
-      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -147,7 +142,6 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -160,18 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Python for Economists</p>
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -322,7 +305,6 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -332,7 +314,6 @@ document.write(`
   </button>
 `);
 </script>
-
 
 <script>
 document.write(`
@@ -380,7 +361,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article">
+                <article class="bd-article" role="main">
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -391,7 +372,7 @@ document.write(`
 </div>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="groupbys-and-pivot-tables">
-<h1>GroupBys and Pivot Tables<a class="headerlink" href="#groupbys-and-pivot-tables" title="Link to this heading">#</a></h1>
+<h1>GroupBys and Pivot Tables<a class="headerlink" href="#groupbys-and-pivot-tables" title="Permalink to this heading">#</a></h1>
 <p>This subchapter goes over groupby’s and pivot table’s, two incredibly useful <code class="docutils literal notranslate"><span class="pre">pandas</span></code> methods.</p>
 <p>To start, let’s load in the same dataset as the first subchapter in the <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> chapter. As a reminder, this dataset has beer sales across 50 continental states in the US. It is sourced from <a class="reference external" href="https://www.aeaweb.org/articles?id=10.1257/aer.99.4.1145"><em>Salience and Taxation: Theory and Evidence</em></a> by Chetty, Looney, and Kroft (AER 2009), and it includes 7 columns:</p>
 <ul class="simple">
@@ -555,7 +536,7 @@ document.write(`
 </div></div></div>
 </div>
 <section id="groupbys">
-<h2>GroupBys<a class="headerlink" href="#groupbys" title="Link to this heading">#</a></h2>
+<h2>GroupBys<a class="headerlink" href="#groupbys" title="Permalink to this heading">#</a></h2>
 <p>Let’s say we’re interested in how the average tax differs by state. Right now, we have a fair amount of data for every state, so it’d great if we could combine the data for each state somehow. <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> helps us do exactly that.</p>
 <p>When we groupby on a column ‘x’, we create <code class="docutils literal notranslate"><span class="pre">groupby</span> <span class="pre">objects</span></code> for each unique value in the column. Each groupby object contains all the data corresponding to that unique value from the original DataFrame. The code below visualizes the first 5 rows from the groupby objects corresponding to the first 5 states in our dataset.</p>
 <div class="cell docutils container">
@@ -625,7 +606,7 @@ ________________________________________________________________________
 </div>
 </div>
 <section id="aggregate">
-<h3>Aggregate<a class="headerlink" href="#aggregate" title="Link to this heading">#</a></h3>
+<h3>Aggregate<a class="headerlink" href="#aggregate" title="Permalink to this heading">#</a></h3>
 <p>Now, we wish to collapse all the groupby objects into a single row, and return a DataFrame that has all the single rows across all groupby objects. We can do that with the help of an aggregation function which tells <code class="docutils literal notranslate"><span class="pre">pandas</span></code> how to combine the rows. For example, the aggregation function <code class="docutils literal notranslate"><span class="pre">.mean()</span></code> tells <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to take the mean of the rows in the groupby object. We do this below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1133,7 +1114,7 @@ ________________________________________________________________________
 </table>
 </div></div></div>
 </div>
-<p>You can visualize the entire process (although using only a subset of the data) <a class="reference external" href="https://pandastutor.com/vis.html#code=import%20pandas%20as%20pd%0Aimport%20io%0A%0Acsv%20%3D%20'''%0A,st_name,year,c_beer,beer_tax,btax_dollars,population,salestax%0A0,AL,1970,33098,72.34113,2.37,3450,4.0%0A1,AL,1971,37598,69.3046,2.37,3497,4.0%0A2,AL,1972,42719,67.14919,2.37,3539,4.0%0A34,AK,1970,5372,13.73566,0.5625,304,0.0%0A35,AK,1971,6336,13.159101500000002,0.5625,316,0.0%0A36,AK,1972,6038,12.749847,0.5625,324,0.0%0A68,AZ,1970,38604,5.494264,0.18,1795,3.0%0A69,AZ,1971,41837,5.263641000000001,0.18,1896,3.0%0A70,AZ,1972,47949,5.0999393,0.18,2008,3.0%0A136,CA,1970,363645,2.747132,0.09,20023,5.0%0A137,CA,1971,380397,2.6318203999999996,0.09,20346,5.0%0A138,CA,1972,401928,2.5499697,0.09,20585,5.0%0A'''%0A%0Adf%20%3D%20pd.read_csv%28io.StringIO%28csv%29%29%0Adf.groupby%28'st_name'%29.mean%28%29&amp;amp;d=2024-01-04&amp;amp;lang=py&amp;amp;v=v1">here</a>. In general, we encourage you to play around with <a class="reference external" href="https://pandastutor.com/">Pandas Tutor</a> to visualize how your code works!</p>
+<p>You can visualize the entire process (although using only a subset of the data) <a class="reference external" href="https://pandastutor.com/vis.html#code=import%20pandas%20as%20pd%0Aimport%20io%0A%0Acsv%20%3D%20'''%0A,st_name,year,c_beer,beer_tax,btax_dollars,population,salestax%0A0,AL,1970,33098,72.34113,2.37,3450,4.0%0A1,AL,1971,37598,69.3046,2.37,3497,4.0%0A2,AL,1972,42719,67.14919,2.37,3539,4.0%0A34,AK,1970,5372,13.73566,0.5625,304,0.0%0A35,AK,1971,6336,13.159101500000002,0.5625,316,0.0%0A36,AK,1972,6038,12.749847,0.5625,324,0.0%0A68,AZ,1970,38604,5.494264,0.18,1795,3.0%0A69,AZ,1971,41837,5.263641000000001,0.18,1896,3.0%0A70,AZ,1972,47949,5.0999393,0.18,2008,3.0%0A136,CA,1970,363645,2.747132,0.09,20023,5.0%0A137,CA,1971,380397,2.6318203999999996,0.09,20346,5.0%0A138,CA,1972,401928,2.5499697,0.09,20585,5.0%0A'''%0A%0Adf%20%3D%20pd.read_csv%28io.StringIO%28csv%29%29%0Adf.groupby%28'st_name'%29.mean%28%29&amp;d=2024-01-04&amp;lang=py&amp;v=v1">here</a>. In general, we encourage you to play around with <a class="reference external" href="https://pandastutor.com/">Pandas Tutor</a> to visualize how your code works!</p>
 <p>There are a lot of different <code class="docutils literal notranslate"><span class="pre">agg</span></code> functions you can use! We’ve given a few below, but won’t be surprised if there are more!</p>
 <p>Built-in aggregation functions:</p>
 <ul class="simple">
@@ -2027,7 +2008,7 @@ Name: c_beer, dtype: float64
 </div>
 </section>
 <section id="filter">
-<h3>Filter<a class="headerlink" href="#filter" title="Link to this heading">#</a></h3>
+<h3>Filter<a class="headerlink" href="#filter" title="Permalink to this heading">#</a></h3>
 <p>Aggregate functions collapse all the groupby objects into a single row. Filter functions instead return a <code class="docutils literal notranslate"><span class="pre">True/False</span></code> for each groupby object and only keep the rows for whom the groupby object returned true. For example, let’s say we want to keep all the states where the <code class="docutils literal notranslate"><span class="pre">beer_tax</span></code> was larger than 50% at least once. We could accomplish that using the following line of code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2194,7 +2175,7 @@ Name: c_beer, dtype: float64
 </div>
 </section>
 <section id="multiple-columns-and-aggregations">
-<h3>Multiple Columns and Aggregations<a class="headerlink" href="#multiple-columns-and-aggregations" title="Link to this heading">#</a></h3>
+<h3>Multiple Columns and Aggregations<a class="headerlink" href="#multiple-columns-and-aggregations" title="Permalink to this heading">#</a></h3>
 <p>Finally, we can also groupby multiple columns. To demonstrate this, let us first create another categorical variable by adding in a <code class="docutils literal notranslate"><span class="pre">decade</span></code> column representing which decade the data is from.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2764,7 +2745,7 @@ Name: c_beer, dtype: float64
 </section>
 </section>
 <section id="pivot-tables">
-<h2>Pivot Tables<a class="headerlink" href="#pivot-tables" title="Link to this heading">#</a></h2>
+<h2>Pivot Tables<a class="headerlink" href="#pivot-tables" title="Permalink to this heading">#</a></h2>
 <p>While we could groupby multiple columns above, the resulting dataset was honestly a bit messy. If you’re interested in the relationship between two categorical variables and how they affect a third numerical variable, a pivot table is often best. For example, let us use a pivot table to visualize the average beer consumption across the decades for each state.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2934,7 +2915,7 @@ Name: c_beer, dtype: float64
               
               
                 <footer class="prev-next-footer">
-                  
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="misc_funcs.html"
@@ -2962,7 +2943,6 @@ Name: c_beer, dtype: float64
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2998,10 +2978,9 @@ By Rohan Jha
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
@@ -3025,8 +3004,8 @@ By Rohan Jha
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
