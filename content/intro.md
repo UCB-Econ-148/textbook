@@ -1,4 +1,4 @@
-# <a> Data Science for Economists </a>
+# <a> Python for Economists </a>
 
 Data analysis is a key part of modern economics; economic theories must be tested with data to be accepted. As such, it is critically important for economists to learn some data science. UC Berkeley's [Economics 148: Data Science for Economists](https://www.econ148.org/) helps economics student learn the skills they need. This online textbook is written by a teaching assistant for that course in an attempt to help make the transition to data science easier. However, the textbook itself is accesible to everyone, not just the students of economics 148.
 
