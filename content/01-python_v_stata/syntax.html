@@ -361,12 +361,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata2python">stata2python</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-import">Installation and Import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">T-tests</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-new-columns">Generating new columns</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-data">Describing the Data</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-matrix">Correlation Matrix</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">T-tests</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regressions">Regressions</a></li>
 </ul>
 </li>
@@ -771,71 +771,6 @@ document.write(`
 <p>Optionally, you may also specify the name of the DataFrame you’re working with via the <code class="docutils literal notranslate"><span class="pre">df_name</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">stata2python</span></code>. The default value for <code class="docutils literal notranslate"><span class="pre">df_name</span></code> is simply <code class="docutils literal notranslate"><span class="pre">df</span></code>.</p>
 <p>Note that the provided Python code will (naturally) require you to have <code class="docutils literal notranslate"><span class="pre">pandas</span></code> installed, and may also require you to have the Python packages <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">scipy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, and <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> installed. The provided code will include all imports necessary (including <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pandas</span> <span class="pre">as</span> <span class="pre">pd</span></code>).</p>
 <p>Below, we discuss all the features currently supported by <code class="docutils literal notranslate"><span class="pre">Stata2Python</span></code>, along with providing example usages.</p>
-<section id="t-tests">
-<h4>T-tests<a class="headerlink" href="#t-tests" title="Link to this heading">#</a></h4>
-<p>This function helps users determine the code for running <a class="reference external" href="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test.html">t-tests</a> in Python. Examples include:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;ttest wage, by(guard)&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-from scipy import stats
-### First, we must filter the DataFrame to obtain the right values
-catvar_vals = np.unique(df[&#39;guard&#39;])
-df_1 = df[df[&#39;guard&#39;] == catvar_vals[0]]
-df_2 = df[df[&#39;guard&#39;] == catvar_vals[1]]
-### Then, we can run our t-test
-stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=True, nan_policy=&#39;propagate&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;ttest wage, by(guard) unequal&quot;</span><span class="p">,</span> <span class="s2">&quot;nba&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-import numpy as np
-from scipy import stats
-### First, we must filter the DataFrame to obtain the right values
-catvar_vals = np.unique(nba[&#39;guard&#39;])
-df_1 = nba[nba[&#39;guard&#39;] == catvar_vals[0]]
-df_2 = nba[nba[&#39;guard&#39;] == catvar_vals[1]]
-### Then, we can run our t-test
-stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=False, nan_policy=&#39;propagate&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Assuming you have all the correct packages installed, you can directly copy paste this code to see the output. For example,</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-<span class="c1">### First, we must filter the DataFrame to obtain the right values</span>
-<span class="n">catvar_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">])</span>
-<span class="n">df_1</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="n">df_2</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-<span class="c1">### Then, we can run our t-test</span>
-<span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">df_2</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=2.1432820571177977, pvalue=0.03299634994484977, df=266.3682612357414)
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="generating-new-columns">
 <h4>Generating new columns<a class="headerlink" href="#generating-new-columns" title="Link to this heading">#</a></h4>
 <p>Used for generating new columns. For example,</p>
@@ -865,7 +800,7 @@ nba[&#39;productivity&#39;] = nba[&#39;points&#39;]/(nba[&#39;minutes&#39;]/nba[
 </div>
 </div>
 </div>
-<p>Copy-pasting the output into Python to verify it works.</p>
+<p>Assuming you have all the correct packages installed, you can directly copy paste this code to see the output. For example,</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1185,9 +1120,10 @@ nba.describe()
 </div>
 </div>
 </div>
+<p>Verifying that the output works:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Verifying that the output works</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="n">nba</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1549,6 +1485,71 @@ pollution.hist(column=&#39;co2pc&#39;,bins=80);
 </div>
 </div>
 </section>
+<section id="t-tests">
+<h4>T-tests<a class="headerlink" href="#t-tests" title="Link to this heading">#</a></h4>
+<p>This function helps users determine the code for running <a class="reference external" href="https://www.jmp.com/en_us/statistics-knowledge-portal/t-test.html">t-tests</a> in Python. Examples include:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;ttest wage, by(guard)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import numpy as np
+from scipy import stats
+### First, we must filter the DataFrame to obtain the right values
+catvar_vals = np.unique(df[&#39;guard&#39;])
+df_1 = df[df[&#39;guard&#39;] == catvar_vals[0]]
+df_2 = df[df[&#39;guard&#39;] == catvar_vals[1]]
+### Then, we can run our t-test
+stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=True, nan_policy=&#39;propagate&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stata2python</span><span class="p">(</span><span class="s2">&quot;ttest wage, by(guard) unequal&quot;</span><span class="p">,</span> <span class="s2">&quot;nba&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import numpy as np
+from scipy import stats
+### First, we must filter the DataFrame to obtain the right values
+catvar_vals = np.unique(nba[&#39;guard&#39;])
+df_1 = nba[nba[&#39;guard&#39;] == catvar_vals[0]]
+df_2 = nba[nba[&#39;guard&#39;] == catvar_vals[1]]
+### Then, we can run our t-test
+stats.ttest_ind(df_1[&#39;wage&#39;], df_2[&#39;wage&#39;], equal_var=False, nan_policy=&#39;propagate&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verifying that the output works:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="c1">### First, we must filter the DataFrame to obtain the right values</span>
+<span class="n">catvar_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">])</span>
+<span class="n">df_1</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">df_2</span> <span class="o">=</span> <span class="n">nba</span><span class="p">[</span><span class="n">nba</span><span class="p">[</span><span class="s1">&#39;guard&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">catvar_vals</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="c1">### Then, we can run our t-test</span>
+<span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">df_1</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">df_2</span><span class="p">[</span><span class="s1">&#39;wage&#39;</span><span class="p">],</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;propagate&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TtestResult(statistic=2.1432820571177977, pvalue=0.03299634994484977, df=266.3682612357414)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 <section id="regressions">
 <h4>Regressions<a class="headerlink" href="#regressions" title="Link to this heading">#</a></h4>
 <p>Used for running regressions, including Python comments to help explain relevant portions of the code. Note that not all features from Stata’s <code class="docutils literal notranslate"><span class="pre">reg</span></code> command are supported. Examples include:</p>
@@ -1886,12 +1887,12 @@ result.summary()
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stata2python">stata2python</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-and-import">Installation and Import</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">T-tests</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-new-columns">Generating new columns</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#describing-the-data">Describing the Data</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#correlation-matrix">Correlation Matrix</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#t-tests">T-tests</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regressions">Regressions</a></li>
 </ul>
 </li>
