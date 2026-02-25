@@ -1,42 +1,41 @@
-name: deploy-book
+name: deploy
 
-# Only run this when the main branch changes
 on:
   push:
     branches:
     - main
-    # If your git repository has the Jupyter Book within some-subfolder next to
-    # unrelated files, you can make this run only if a file within that specific
-    # folder has been modified.
-    #
-    # paths:
-    # - some-subfolder/**
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  deploy-book:
+  deploy:
     runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v3
+    permissions:
+      contents: write
 
-    # Install dependencies
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.11
+        python-version: 3.x
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v4
 
     - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      run: pip install jupyter-book
 
-    # Build the book
-    - name: Build the book
-      run: |
-        jupyter-book build . --all
+    - name: Build the Jupyter Book site
+      run: cd docs && jupyter book build --html
 
-    # Push the book's HTML to github-pages
-    - name: GitHub Pages action
+    - name: Generate redirects
+      run: |
+        uv run https://raw.githubusercontent.com/jupyter-book/jb1-redirect-generator/main/generate_redirects.py \
+          --base-url https://example.com/ \
+          --output-dir docs/_build/html
+
+    - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build/html
+        publish_dir: ./docs/_build/html
