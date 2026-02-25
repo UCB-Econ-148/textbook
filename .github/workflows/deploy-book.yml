@@ -5,7 +5,7 @@ on:
     branches:
     - main
 env:
-  BASE_URL: "/textbook"
+  BASE_URL: '/textbook'
 
 jobs:
   deploy:
