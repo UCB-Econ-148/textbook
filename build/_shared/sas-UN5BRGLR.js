@@ -1,1 +1,1 @@
-import{a}from"/build/_shared/chunk-SLKRQVNT.js";import"/build/_shared/chunk-OZE3FFNP.js";export default a();
+import{a}from"/textbook/build/_shared/chunk-SLKRQVNT.js";import"/textbook/build/_shared/chunk-OZE3FFNP.js";export default a();
