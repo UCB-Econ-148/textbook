@@ -26,7 +26,7 @@ jobs:
       run: pip install jupyter-book
 
     - name: Build the Jupyter Book site
-      run: cd docs && jupyter book build --html
+      run: jupyter book build --html
 
     - name: Generate redirects
       run: |
@@ -38,4 +38,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/_build/html
+        publish_dir: _build/html
