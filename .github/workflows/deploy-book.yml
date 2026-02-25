@@ -33,8 +33,8 @@ jobs:
     - name: Generate redirects
       run: |
         uv run https://raw.githubusercontent.com/jupyter-book/jb1-redirect-generator/main/generate_redirects.py \
-          --base-url https://example.com/ \
-          --output-dir docs/_build/html
+          --base-url https://econ148.org/textbook \
+          --output-dir _build/html
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
